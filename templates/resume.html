@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swarnim Jambhrunkar | Resume</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --chip:#f3f4f6;
+      --accent:#111827;
+      --max: 920px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .page{
+      max-width: var(--max);
+      margin: 28px auto;
+      padding: 28px 28px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 1px 14px rgba(17,24,39,0.06);
+    }
+    header{
+      display:flex;
+      gap:18px;
+      justify-content:space-between;
+      align-items:flex-start;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .name{
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin-top: 6px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .contact{
+      text-align:right;
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .contact div{ margin: 2px 0; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      padding-top: 14px;
+    }
+    @media (max-width: 860px){
+      .page{ margin:0; border:none; border-radius:0; box-shadow:none; }
+      header{ flex-direction:column; }
+      .contact{ text-align:left; white-space: normal; }
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    section{
+      margin-bottom: 14px;
+    }
+    .h{
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      color: var(--muted);
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+    .p{
+      margin: 0;
+      color: var(--text);
+    }
+    .muted{ color: var(--muted); }
+    .item{
+      margin-bottom: 10px;
+    }
+    .role{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .role .title{
+      font-weight: 800;
+    }
+    .role .org{
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .role .meta{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 12.5px;
+      white-space: nowrap;
+    }
+
+    ul{
+      margin: 6px 0 0 18px;
+      padding:0;
+    }
+    li{ margin: 3px 0; }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .chip{
+      background: var(--chip);
+      border: 1px solid var(--line);
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 12px;
+    }
+
+    /* Print */
+    @media print{
+      body{ background:#fff; }
+      .page{
+        border:none;
+        box-shadow:none;
+        margin:0;
+        padding:0;
+        max-width: none;
+        border-radius:0;
+      }
+      a{ text-decoration:none; }
+      .chip{ border-color:#ddd; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <div class="name">Swarnim Jambhrunkar</div>
+        <div class="subtitle">Second-Year B.Tech (Computer Science – AI &amp; ML) · Mumbai, India</div>
+        <div class="chips" aria-label="quick tags">
+          <span class="chip">AI/ML Systems</span>
+          <span class="chip">NLP + RAG</span>
+          <span class="chip">Graphs</span>
+          <span class="chip">Finance + BioML</span>
+        </div>
+      </div>
+      <div class="contact">
+        <div>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></div>
+        <div>📞 +91-XXXXXXXXXX</div>
+        <div>🔗 <a href="https://linkedin.com/in/yourname" target="_blank" rel="noreferrer">linkedin.com/in/yourname</a></div>
+        <div>💻 <a href="https://github.com/swarnimlovesyou" target="_blank" rel="noreferrer">github.com/swarnimlovesyou</a></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <div>
+        <section>
+          <div class="h">Profile</div>
+          <p class="p">
+            AI/ML-focused Computer Science undergraduate who enjoys breaking down complex systems and rebuilding them from first principles.
+            Strong emphasis on understanding why models work rather than treating them as black boxes.
+            Experienced in designing end-to-end ML pipelines spanning data ingestion, feature engineering, prediction, and retrieval.
+            Interested in applying AI to research-driven domains such as medicine and finance, where interpretability, uncertainty, and reliability
+            matter as much as performance.
+          </p>
+        </section>
+
+        <section>
+          <div class="h">Projects</div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">AI-Based Stock Market Prediction &amp; Risk Analysis System</span>
+                <span class="org muted"> · ML Pipeline</span>
+              </div>
+            </div>
+            <ul>
+              <li>Built short-term (20-day) and long-term (252-day) forecasting models using <b>DeepAR</b> and <b>LightGBM quantile regression</b>.</li>
+              <li>Engineered <b>50+ financial features</b> (RSI, EMA, rolling returns, volatility, correlations, drawdown, relative strength).</li>
+              <li>Generated calibrated prediction intervals (P5–P95) to quantify uncertainty beyond point forecasts.</li>
+              <li>Implemented modular separation for data collection, feature generation, inference, visualization, and synthesis.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">ADMET Property Prediction for Drug Discovery</span>
+                <span class="org muted"> · BioML</span>
+              </div>
+            </div>
+            <ul>
+              <li>Developed ML models to predict <b>ADMET properties</b> (Absorption, Distribution, Metabolism, Excretion, Toxicity).</li>
+              <li>Worked with molecular representations and features to train classification/regression models for pharmacokinetic signals.</li>
+              <li>Evaluated reliability using appropriate metrics (e.g., ROC-AUC, RMSE) and dataset hygiene checks.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">Research Paper Recommendation System (Graph + Retrieval)</span>
+                <span class="org muted"> · Recsys</span>
+              </div>
+            </div>
+            <ul>
+              <li>Designed a recommendation pipeline combining <b>text embeddings</b> with <b>citation-graph structure</b>.</li>
+              <li>Used <b>FAISS</b> for fast candidate retrieval and ranking by semantic + structural relevance.</li>
+              <li>Built evolving interest vectors from interaction history to personalize recommendations.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">RBI Circular Compliance &amp; Risk Analysis (RAG System)</span>
+                <span class="org muted"> · NLP</span>
+              </div>
+            </div>
+            <ul>
+              <li>Built a fully local <b>RAG pipeline</b> to analyze RBI circulars and extract explicit/implicit risk signals.</li>
+              <li>Generated cross-document mappings (risk type → circular references) to support analyst-style queries.</li>
+              <li>Designed prompts and chunking strategy for reliable extraction and traceable summaries.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="h">Internship Experience</div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">Data Analyst Intern</span>
+                <span class="org"> · Reserve Bank of India (RBI)</span>
+              </div>
+              <div class="meta">Month YYYY – Month YYYY</div>
+            </div>
+            <ul>
+              <li>Built a structured database for <b>NBFC directors</b> and <b>board-member relationships</b> using official MCA data (Ministry of Corporate Affairs).</li>
+              <li>Conducted <b>compliance and governance risk analysis</b> by mapping director affiliations across entities and checking alignment with current rules.</li>
+              <li>Delivered a clean, reusable data foundation intended to support future supervisory and compliance workflows.</li>
+              <li>Developed an in-house <b>LLM-based RAG system</b> for social media sentiment analysis that was previously outsourced.</li>
+              <li>Automated ingestion, retrieval, and summarization of public sentiment to enable faster internal monitoring and early risk signals.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">Python Programming Intern (Virtual)</span>
+                <span class="org"> · Internshala</span>
+              </div>
+              <div class="meta">May 2024 – Jun 2024</div>
+            </div>
+            <ul>
+              <li>Developed Python programs focused on automation, data handling, and problem-solving fundamentals.</li>
+              <li>Built mini-projects (e.g., Student Record System) emphasizing functions, file handling, and error handling.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="role">
+              <div>
+                <span class="title">Web Development Intern</span>
+                <span class="org"> · XYZ Tech Solutions</span>
+              </div>
+              <div class="meta">Apr 2024 – Jun 2024</div>
+            </div>
+            <ul>
+              <li>Built responsive web pages using HTML, CSS, and JavaScript with a focus on usability and layout clarity.</li>
+              <li>Collaborated in a small team with task-based delivery.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <section>
+          <div class="h">Skills &amp; Abilities</div>
+          <p class="p">
+            <b>Programming:</b> Python, Java, SQL<br/>
+            <b>Machine Learning:</b> Time-Series Forecasting, Feature Engineering, Model Evaluation, Quantile Regression<br/>
+            <b>NLP &amp; Retrieval:</b> Text Embeddings, FAISS, Sentence-Transformers, RAG Pipelines<br/>
+            <b>Graph &amp; Research Systems:</b> Citation Graphs, Graph-based Representations, Similarity &amp; Retrieval Systems<br/>
+            <b>Data &amp; Visualization:</b> Pandas, NumPy, Plotly, Data Analysis &amp; Preprocessing<br/>
+            <b>Tools:</b> Git, GitHub, Linux, MySQL/PostgreSQL (basic)
+          </p>
+        </section>
+
+        <section>
+          <div class="h">Tools &amp; Libraries</div>
+          <ul>
+            <li><b>Core ML/Data:</b> PyTorch, Scikit-learn, LightGBM, Pandas, NumPy, SciPy</li>
+            <li><b>NLP/Retrieval:</b> Sentence-Transformers, FAISS, HuggingFace Transformers</li>
+            <li><b>Time-Series:</b> GluonTS, statsmodels, yfinance</li>
+            <li><b>Visualization:</b> Plotly, Matplotlib, Seaborn</li>
+            <li><b>Optimization:</b> Optuna</li>
+            <li><b>Graphs:</b> NetworkX, Neo4j (basic)</li>
+            <li><b>Cheminformatics:</b> RDKit</li>
+            <li><b>Dev:</b> Git, GitHub, Linux/CLI, VS Code, Jupyter Notebook</li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="h">Education</div>
+          <div class="item">
+            <div class="role">
+              <div class="title">Atlas SkillTech University, Mumbai</div>
+              <div class="meta">2023 – Present</div>
+            </div>
+            <div class="muted">B.Tech – Computer Science (AI &amp; ML) · Second Year</div>
+          </div>
+          <div class="item">
+            <div class="role">
+              <div class="title">Maharashtra State Board</div>
+              <div class="meta">2021 – 2023</div>
+            </div>
+            <div class="muted">Higher Secondary Certificate (HSC)</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="h">Certifications</div>
+          <ul>
+            <li>IBM – AI Fundamentals</li>
+            <li>Coursera – Python for Everybody</li>
+            <li>NPTEL – Introduction to Data Science</li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="h">Interests</div>
+          <div class="muted">Machine Learning Research · Drug Discovery (ADMET) · Financial Risk Analysis · NLP for Scientific Text · AI System Design</div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
