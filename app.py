@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return """
     <h1>Name: Swarnim Jambhrunkar</h1>
-    <h2>AppID: 12345</h2>
-    <h3>Hobbies: AI/ML, Football, Reading</h3>
+    <h2>hobbies: Reading, Swimming, Coding</h2>
+    <h2>AppID: 2409789</h2>
     """
 
 if __name__ == "__main__":
-    print("Flask app loaded successfully")
+    app.run(host="0.0.0.0", port=5000)
